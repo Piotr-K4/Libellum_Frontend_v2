@@ -7,22 +7,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <div class="page-container">
     <header class="header">
         <img src="./images/logo.svg" class="header__logo">
-        <div class="wrapper__search-input--desktop">
-            <input type="text" class="search-input">
+        <div class="wrapper-search--desktop">
+            <form>
+                <div class="search-box">
+                    <input type="search" class="search-input" placeholder="Szukaj">
+                    <button class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+            </form>
         </div>
-        <div class="wrapper__header__menu-buttons">
+        <div class="header__menu-buttons">
             <button class="header__menu-button"><i class="fa fa-user" aria-hidden="true"></i></button>
-            <button class="header__menu-button" onclick="toggleMenu();"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            <button class="header__menu-button header__menu-button--menu" onclick="toggleMenu();"><i class="fa fa-bars" aria-hidden="true"></i></button>
         </div>
     </header>
+    <nav class="wrapper-navbar">
+        <div class="navbar">
+            <a href="./main.html" class="navbar__option">Katalog</a>
+            <a href="./main.html" class="navbar__option">TOP 100</a>
+            <a href="./main.html" class="navbar__option">Społeczność</a>
+            <a href="./main.html" class="navbar__option">Dodaj książke</a>
+        </div>
+    </nav>
     <div class="mobile-menu">
-
-        <div class="wrapper__mobile-menu__exit-button">
+        <div class="wrapper-mobile-menu__exit-button">
             <button class="mobile-menu__exit-button" onclick="toggleMenu();"><i class="fa fa-times" aria-hidden="true"></i></button>
         </div>
-
         <details>
             <summary class="mobile-menu__option">Katalog</summary>
             <a href="./main.html" class="mobile-menu__option mobile-menu__link--small">Książki</a>
@@ -36,15 +48,13 @@
         </details>
             <a class="mobile-menu__option" href="">DODAJ KSIĄŻKE</a>
     </div>
-    <div class="wrapper__search-input--mobile">
+    <div class="wrapper-search--mobile">
         <form>
             <div class="search-box">
                 <input type="search" class="search-input" placeholder="Szukaj">
                 <button class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
-
         </form>
-        
     </div>
 
     <main class="page">
@@ -63,7 +73,7 @@
         <div>Siemano kolano kurwy</div>
         <div>Siemano kolano kurwy</div>
     </main>
-    
+    </div> 
 </body>
 <script src="./main.js">
 </script>
