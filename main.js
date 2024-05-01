@@ -6,4 +6,10 @@ function toggleMenu(){
 
 }
 
+function toggleOptionLinks(){
+    let linksOption = document.querySelector(".navbar__links")
+
+    linksOption.classList.toggle("navbar__links--is-active")
+}
+
 
