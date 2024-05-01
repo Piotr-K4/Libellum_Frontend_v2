@@ -6,9 +6,8 @@ function toggleMenu(){
 
 }
 
-function toggleOptionLinks(){
-    let linksOption = document.querySelector(".navbar__links")
-
+function toggleOptionLinks(element){
+    let linksOption = element.nextElementSibling;
     linksOption.classList.toggle("navbar__links--is-active")
 }
 

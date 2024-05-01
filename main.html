@@ -27,7 +27,7 @@
         <div class="navbar">            
 
             <div class="navbar__more-option">
-                <button class="navbar__option" onclick="toggleOptionLinks();">Katalog</button>
+                <button class="navbar__option" onclick="toggleOptionLinks(this);">Katalog</button>
                 <div class="navbar__links">
                     <a href="" class="navbar__link">cos</a>
                     <a href="" class="navbar__link">cos</a>
@@ -35,8 +35,12 @@
                     <a href="" class="navbar__link">cos</a>
                 </div>
             </div>
-            <a href="./main.html" class="navbar__option">TOP 100</a>
-            <a href="./main.html" class="navbar__option">Społeczność</a>
+             <div class="navbar__more-option">
+                <button class="navbar__option" onclick="toggleOptionLinks(this);">Społeczność</button>
+                <div class="navbar__links">
+                    <a href="" class="navbar__link">Ranking użytkowników</a>
+                </div>
+            </div>           <a href="./main.html" class="navbar__option">TOP 100</a>
             <a href="./main.html" class="navbar__option">Dodaj książke</a>
         </div>
     </nav>
