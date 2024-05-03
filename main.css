@@ -1,0 +1,49 @@
+.main__containter{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+
+.label{
+    color: #a1a1a1;
+    display: block;
+    padding: 0.3rem;
+    border-bottom: 1px solid #a1a1a1;
+}
+.book{
+    padding: 0.5rem;
+}
+
+.books--grid{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(8,10rem);
+    grid-template-rows: none;
+    overflow-x: auto;
+}
+
+.book__link{
+    text-decoration: none;
+    color: black;
+}
+
+.book__img{
+    width: 100%;
+    padding: 0 0.5rem;
+}
+
+.book__title{
+    margin: 0;
+    text-align: center;
+}
+
+.book__author{
+    margin: 0;
+    text-align: center;
+}
+
+
+@media (min-width:992px){
+}
