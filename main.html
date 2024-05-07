@@ -24,7 +24,7 @@
         </div>
         <div class="header__menu-buttons">
             <button class="header__menu-button header__menu-button--search" onclick="toggleSearchInput();"><i class="fa fa-search" aria-hidden="true"></i></button>
-            <button class="header__menu-button header__menu-button--user" onclick="toggleSearchInput();"><i class="fa fa-user-o" aria-hidden="true"></i></button>
+            <button class="header__menu-button header__menu-button--user"><i class="fa fa-user-o" aria-hidden="true"></i></button>
         </div>
     </header>
     <nav class="wrapper-navbar">
@@ -47,32 +47,45 @@
             <a href="./main.html" class="navbar__option">Dodaj książke</a>
         </div>
     </nav>
-    <div class="mobile-menu" onmouseuo="toggleMenu();">
-        <div class="exit-button">
+    <div class="mobile-menu">
+        <div class="mobile-menu-buttons">
+            <button class="header__menu-button"><i class="fa fa-user-o" aria-hidden="true"></i></button>
             <button class="exit-button" onclick="toggleMenu();"><i class="fa fa-times" aria-hidden="true"></i></button>
         </div>
-        <div>
-            <div class="wrapper-mobile-menu__option"> 
-                <h1 class="mobile-menu__option">Katalog v2</h1>
-                <button class="mobile-menu__option--button" onclick="toggleMenuLinks(this);"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-            </div>
-            <div class="mobile-menu__links">
-                <a href="./main.html" class="mobile-menu__option mobile-menu__link--small">Książki</a>
-                <a href="./main.html" class="mobile-menu__option mobile-menu__link--small">Autorzy</a>
-                <a href="./main.html" class="mobile-menu__option mobile-menu__link--small">Cytaty</a>
-            </div>
+        <div class="mobile-primary-menu">
+            <ul class="mobile-primary-menu">
+                <li class="mobile-menu-item">
+                    <div class="wrapper-mobile-menu__option">
+                        <a class="mobile-menu__option">Katalog</a>
+                        <button class="mobile-menu__option--button" onclick="toggleMenuLinks(this);"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                    </div>
+                    <ul class="mobile-menu__links">
+                        <li class="mobile-menu__link--small">Ksiązki</li>
+                        <li class="mobile-menu__link--small">Autorzy</li>
+                        <li class="mobile-menu__link--small">Cytaty</li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="wrapper-mobile-menu__option">
+                        <a class="mobile-menu__option">Katalog</a>
+                        <button class="mobile-menu__option--button" onclick="toggleMenuLinks(this);"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                    </div>
+                    <ul class="mobile-menu__links">
+                        <li class="mobile-menu__link--small">Ksiązki</li>
+                        <li class="mobile-menu__link--small">Autorzy</li>
+                        <li class="mobile-menu__link--small">Cytaty</li>
+                        <li class="mobile-menu__link--small">Cytaty</li>
+                        <li class="mobile-menu__link--small">Cytaty</li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="wrapper-mobile-menu__option">
+                        <a class="mobile-menu__option">Katalog</a>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div>
-            <div class="wrapper-mobile-menu__option"> 
-                <h1 class="mobile-menu__option">Katalog asdasddav2</h1>
-                <button class="mobile-menu__option--button" onclick="toggleMenuLinks(this);"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-            </div>
-            <div class="mobile-menu__links">
-                <a href="./main.html" class="mobile-menu__option mobile-menu__link--small">Książki</a>
-                <a href="./main.html" class="mobile-menu__option mobile-menu__link--small">Autorzy</a>
-                <a href="./main.html" class="mobile-menu__option mobile-menu__link--small">Cytaty</a>
-            </div>
-        </div>
+
     </div>
     <div class="wrapper-search--mobile">
         <div class="exit-button--small">
@@ -86,7 +99,6 @@
         </form>
     </div>
     <main class="main__containter">
-
         <div class="section">
             <h3 class="label">Ostatnio dodane</h3>
             <div class="books--grid">
@@ -136,92 +148,6 @@
                 </a>
             </div>
         </div>
-
-        <div class="section">
-            <h3 class="label">Ostatnio dodane</h3>
-            <div class="books--grid">
-                <div class="book">
-                    <img src="/images/ksiazki/BELETRYSTYKA/clone.jpg" class="book__img">
-                    <h4 class="book__title">Clone</h4> 
-                    <h6 class="book__author">Clone</h6> 
-                </div>
-                <div class="book">
-                    <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
-                    <h4 class="book__title">Clone</h4> 
-                    <h6 class="book__author">Clone</h6> 
-                </div>
-                <div class="book">
-                    <img src="/images/ksiazki/BELETRYSTYKA/clone.jpg" class="book__img">
-                    <h4 class="book__title">Clone</h4> 
-                    <h6 class="book__author">Clone</h6> 
-                </div>
-                <a href="main.html" class="book__link">
-                <div class="book">
-                    <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
-                    <h4 class="book__title">Clone</h4> 
-                    <h6 class="book__author">Clone</h6> 
-                </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3 class="label">Ostatnio dodane</h3>
-            <div class="books--grid">
-                <div class="book">
-                    <img src="/images/ksiazki/BELETRYSTYKA/clone.jpg" class="book__img">
-                    <h4 class="book__title">Clone</h4> 
-                    <h6 class="book__author">Clone</h6> 
-                </div>
-                <div class="book">
-                    <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
-                    <h4 class="book__title">Clone</h4> 
-                    <h6 class="book__author">Clone</h6> 
-                </div>
-                <div class="book">
-                    <img src="/images/ksiazki/BELETRYSTYKA/clone.jpg" class="book__img">
-                    <h4 class="book__title">Clone</h4> 
-                    <h6 class="book__author">Clone</h6> 
-                </div>
-                <a href="main.html" class="book__link">
-                <div class="book">
-                    <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
-                    <h4 class="book__title">Clone</h4> 
-                    <h6 class="book__author">Clone</h6> 
-                </div>
-                </a>
-            </div>
-        </div>
-
-
-        <div class="section">
-            <h3 class="label">Ostatnio dodane</h3>
-            <div class="books--grid">
-                <div class="book">
-                    <img src="/images/ksiazki/BELETRYSTYKA/clone.jpg" class="book__img">
-                    <h4 class="book__title">Clone</h4> 
-                    <h6 class="book__author">Clone</h6> 
-                </div>
-                <div class="book">
-                    <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
-                    <h4 class="book__title">Clone</h4> 
-                    <h6 class="book__author">Clone</h6> 
-                </div>
-                <div class="book">
-                    <img src="/images/ksiazki/BELETRYSTYKA/clone.jpg" class="book__img">
-                    <h4 class="book__title">Clone</h4> 
-                    <h6 class="book__author">Clone</h6> 
-                </div>
-                <a href="main.html" class="book__link">
-                <div class="book">
-                    <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
-                    <h4 class="book__title">Clone</h4> 
-                    <h6 class="book__author">Clone</h6> 
-                </div>
-                </a>
-            </div>
-        </div>
-
     </main>
     </div> 
 </body>
