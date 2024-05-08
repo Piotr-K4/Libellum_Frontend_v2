@@ -26,3 +26,13 @@ form{
     color: #3a4c5a;
 }
 
+
+::-webkit-scrollbar{
+    height: 8px;
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #4E4F50;
+    border-radius: 20px;
+}

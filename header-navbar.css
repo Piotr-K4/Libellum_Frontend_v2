@@ -1,5 +1,5 @@
 .page-container{
-    max-width: 1180px;
+    max-width: 1360px;
     min-height: 100%;
     margin: 0 auto;
     /* padding: 0 1rem; */
@@ -62,7 +62,7 @@
     outline:none;
     border:solid 1px #d1d1d1;
     color:#171e24;
-    width: 50%;
+    width: 80%;
 }
 
 .search-input:focus{
@@ -243,13 +243,12 @@
     display: none;
     background-color: white;
     flex-grow: 1;
-    padding-left: 3rem;
     text-align: center;
+    padding-bottom: 1rem;
     border-bottom: 1px solid #ebedef;
 }
 
 .navbar__option{
-    margin: 0 1rem;
     font-size: 1.3rem;
     padding: 0.5rem;
     font-weight: bold;

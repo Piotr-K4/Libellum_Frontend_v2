@@ -6,15 +6,29 @@
 }
 
 
+.section-books{
+    padding: 0.5rem;
+
+}
 
 .book{
-    padding: 0.5rem;
+    background-color:#F5F4F0;
+    box-shadow: 11px 14px 35px -28px rgba(0,0,0,0.75);
+    border-radius: 30px;
+    padding: 1.5rem;
+    gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
 }
 
 .books--grid{
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(8,10rem);
+    padding-bottom: 2rem;
+    padding-right: 1rem;
+    gap: 3rem;
+    grid-template-columns: repeat(8,20rem);
     grid-template-rows: none;
     overflow-x: auto;
 }
@@ -25,23 +39,30 @@
 }
 
 .book__img{
-    width: 100%;
-    padding: 0 0.5rem;
+    max-width: 200px;
+    height: 300px; 
+    border-radius: 30px;
 }
 
 .book__title{
     margin: 0;
-    text-align: center;
+    align-self:flex-start;
+    padding:0 1.5rem;
+    white-space: pre ;
+    max-width: 25ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .book__author{
     margin: 0;
-    text-align: center;
+    align-self:flex-start;
+    padding:0 1.5rem;
 }
 
 .promo-banner{
     background-color:#F5F4F0 ;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 0.5rem;
     gap: 1rem;
     display: flex;
