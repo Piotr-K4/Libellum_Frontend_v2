@@ -1,0 +1,35 @@
+@media (min-width:768px){
+    .promo-banner__label{
+        font-size: 3.3rem;
+    }
+
+    .promo-banner__text{
+        font-size: 1.3rem;
+    }
+
+ }
+
+@media (min-width:992px){
+    .header__menu-button--menu,
+    .header__menu-button--search{
+        display:none;
+    }
+    .header__menu-button--user,
+    .navbar{
+        display: block;
+    }
+    .page-container{
+        padding: 0 3rem;
+    }
+    .wrapper-search--desktop{
+        display: block;
+    }
+    .wrapper-search--mobile{
+        display: none;
+    }
+    
+    .promo-banner{
+        flex-direction: row;
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,28 @@
+*{
+    font-family: "Roboto";
+}
+
+body{
+    margin: 0;
+    /* background-image: url(./images/backgroundv3.jpg); */
+    box-shadow: rgb(215, 215, 215) 0px 0px 0px 1px, ;
+    background-color: #dcdfe1;
+    height: 3000px;
+}
+form{
+    margin: 0;
+}
+
+
+.label{
+    color: #4E4F50;
+    display: block;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    line-height: 95%;
+}
+
+.text{
+    color: #3a4c5a;
+}
+

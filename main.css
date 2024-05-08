@@ -6,12 +6,7 @@
 }
 
 
-.label{
-    color: #a1a1a1;
-    display: block;
-    padding: 0.3rem;
-    border-bottom: 1px solid #a1a1a1;
-}
+
 .book{
     padding: 0.5rem;
 }
@@ -43,6 +38,41 @@
     margin: 0;
     text-align: center;
 }
+
+.promo-banner{
+    background-color:#F5F4F0 ;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.promo-banner__logo{
+    display: flex;
+    justify-content: right;
+}
+
+.promo-banner__img{
+    width: 100%;
+    max-width: 500px;
+}
+
+.promo-banner__text{
+    margin-bottom: 30px;
+}
+
+.promo-banner__link{
+    text-decoration: none;
+    border: 1px solid #4E4F50;
+    background-color: #4E4F50;
+    color: white;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+}
+
+
 
 
 @media (min-width:992px){
