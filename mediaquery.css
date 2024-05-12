@@ -6,7 +6,15 @@
     .promo-banner__text{
         font-size: 1.3rem;
     }
+    
+    .category{
+        flex-direction: row;
+    }
 
+    .footer__header{
+        flex-direction: row;
+        align-items: center;
+    }
  }
 
 @media (min-width:992px){
@@ -32,4 +40,16 @@
         flex-direction: row;
         padding: 2rem;
     }
+    .books-grid--hits{
+        grid-template-columns:repeat(3,minmax(17rem,17rem));
+    }
+
+}
+
+
+@media (min-width:1200px){
+    .section-categories__links{
+        flex-direction: row;
+    }
+    
 }

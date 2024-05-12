@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="header-navbar.css">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="mediaquery.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,12 +15,91 @@
 </head>
 <body>
     <div class="page-container">
-    <header class="header">
-        <div class="header__menu-buttons">
-            <button class="header__menu-button header__menu-button--menu" onclick="toggleMenu();"><i class="fa fa-bars" aria-hidden="true"></i></button>
+
+        <header class="header">
+            <div class="header__menu-buttons">
+                <button class="header__menu-button header__menu-button--menu" onclick="toggleMenu();"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            </div>
+            <img src="./images/logov2.svg" class="header__logo">
+            <div class="wrapper-search--desktop">
+                <form>
+                    <div class="search-box">
+                        <input type="search" class="search-input" placeholder="Szukaj">
+                        <button class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="header__menu-buttons">
+                <button class="header__menu-button header__menu-button--search" onclick="toggleSearchInput();"><i class="fa fa-search" aria-hidden="true"></i></button>
+                <button class="header__menu-button header__menu-button--user"><i class="fa fa-user-o" aria-hidden="true"></i></button>
+            </div>
+        </header>
+
+        <nav class="wrapper-navbar">
+            <div class="navbar">            
+                <div class="navbar__more-option">
+                    <button class="navbar__option">Katalog <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                    <div class="navbar__links">
+                        <a href="" class="navbar__link">cos</a>
+                        <a href="" class="navbar__link">cos</a>
+                        <a href="" class="navbar__link">cos</a>
+                        <a href="" class="navbar__link">cos</a>
+                    </div>
+                </div>
+                 <div class="navbar__more-option">
+                    <button class="navbar__option">Społeczność<i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                    <div class="navbar__links">
+                        <a href="" class="navbar__link">Ranking użytkowników</a>
+                    </div>
+                </div>           <a href="./main.html" class="navbar__option">TOP 100</a>
+                <a href="./main.html" class="navbar__option">Dodaj książke</a>
+            </div>
+        </nav>
+    
+        <div class="mobile-menu">
+            <div class="mobile-menu-buttons">
+                <button class="header__menu-button"><i class="fa fa-user-o" aria-hidden="true"></i></button>
+                <button class="exit-button" onclick="toggleMenu();"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+            <div class="mobile-primary-menu">
+                <ul class="mobile-primary-menu">
+                    <li class="mobile-menu-item">
+                        <div class="wrapper-mobile-menu__option">
+                            <a class="mobile-menu__option">Katalog</a>
+                            <button class="mobile-menu__option--button" onclick="toggleMenuLinks(this);"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                        </div>
+                        <ul class="mobile-menu__links">
+                            <li class="mobile-menu__link--small">Ksiązki</li>
+                            <li class="mobile-menu__link--small">Autorzy</li>
+                            <li class="mobile-menu__link--small">Cytaty</li>
+                        </ul>
+                    </li>
+                    <li class="mobile-menu-item">
+                        <div class="wrapper-mobile-menu__option">
+                            <a class="mobile-menu__option">Katalog</a>
+                            <button class="mobile-menu__option--button" onclick="toggleMenuLinks(this);"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                        </div>
+                        <ul class="mobile-menu__links">
+                            <li class="mobile-menu__link--small">Ksiązki</li>
+                            <li class="mobile-menu__link--small">Autorzy</li>
+                            <li class="mobile-menu__link--small">Cytaty</li>
+                            <li class="mobile-menu__link--small">Cytaty</li>
+                            <li class="mobile-menu__link--small">Cytaty</li>
+                        </ul>
+                    </li>
+                    <li class="mobile-menu-item">
+                        <div class="wrapper-mobile-menu__option">
+                            <a class="mobile-menu__option">Katalog</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <img src="./images/logov2.svg" class="header__logo">
-        <div class="wrapper-search--desktop">
+    
+        <div class="wrapper-search--mobile">
+            <div class="exit-button--small">
+                <button class="exit-button--small" onclick="toggleSearchInput();"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
             <form>
                 <div class="search-box">
                     <input type="search" class="search-input" placeholder="Szukaj">
@@ -27,158 +107,401 @@
                 </div>
             </form>
         </div>
-        <div class="header__menu-buttons">
-            <button class="header__menu-button header__menu-button--search" onclick="toggleSearchInput();"><i class="fa fa-search" aria-hidden="true"></i></button>
-            <button class="header__menu-button header__menu-button--user"><i class="fa fa-user-o" aria-hidden="true"></i></button>
-        </div>
-    </header>
-    <nav class="wrapper-navbar">
-        <div class="navbar">            
-            <div class="navbar__more-option">
-                <button class="navbar__option">Katalog <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-                <div class="navbar__links">
-                    <a href="" class="navbar__link">cos</a>
-                    <a href="" class="navbar__link">cos</a>
-                    <a href="" class="navbar__link">cos</a>
-                    <a href="" class="navbar__link">cos</a>
+
+        <main class="main__containter">
+            <div class="promo-banner">
+                <div class="promo-banner__slogan">
+                    <h1 class="label promo-banner__label">Znajdź swoją <br> ulubioną książkę <br> i napisz recenezje</h1>
+                    <p class="text promo-banner__text">Dołącz do społeczności Libellum <br> i dziel się swoimi wrażeniami z książek</p>
+                    <a href="" class="promo-banner__link">Dołącz !</a>
+                </div>
+                <div class="promo-banner__logo">
+                    <img src="./images/banner.png"  class="promo-banner__img">
                 </div>
             </div>
-             <div class="navbar__more-option">
-                <button class="navbar__option">Społeczność<i class="fa fa-angle-down" aria-hidden="true"></i></button>
-                <div class="navbar__links">
-                    <a href="" class="navbar__link">Ranking użytkowników</a>
+            <div class="section-books">
+                <h1 class="label">Ostatnio dodane</h1>
+                <div class="books-grid">
+                    <a href="main.html" class="book__link">
+                        <div class="book">
+                            <img src="/images/ksiazki/T003964.jpg" class="book__img">
+                            <h4 class="book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                            <h6 class="book__author">Clone</h6> 
+                        </div>
+                    </a>
+                    <a href="main.html" class="book__link">
+                        <div class="book">
+                            <img src="/images/ksiazki/metro.jpg" class="book__img">
+                            <h4 class="book__title">Clone</h4> 
+                            <h6 class="book__author">Clone</h6> 
+                        </div>
+                    </a>
+                    <a href="main.html" class="book__link">
+                        <div class="book">
+                            <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
+                            <h4 class="book__title">Clone</h4> 
+                            <h6 class="book__author">Clone</h6> 
+                        </div>
+                    </a>
+                    <a href="main.html" class="book__link">
+                        <div class="book">
+                            <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
+                            <h4 class="book__title">Clone</h4> 
+                            <h6 class="book__author">Clone</h6> 
+                        </div>
+                    </a>
+                    <a href="main.html" class="book__link">
+                        <div class="book">
+                            <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
+                            <h4 class="book__title">Clone</h4> 
+                            <h6 class="book__author">Clone</h6> 
+                        </div>
+                    </a>
+                    <a href="main.html" class="book__link">
+                        <div class="book">
+                            <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
+                            <h4 class="book__title">Clone</h4> 
+                            <h6 class="book__author">Clone</h6> 
+                        </div>
+                    </a>
+                    <a href="main.html" class="book__link">
+                        <div class="book">
+                            <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
+                            <h4 class="book__title">Clone</h4> 
+                            <h6 class="book__author">Clone</h6> 
+                        </div>
+                    </a>
+                    <a href="main.html" class="book__link">
+                        <div class="book">
+                            <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
+                            <h4 class="book__title">Clone</h4> 
+                            <h6 class="book__author">Clone</h6> 
+                        </div>
+                    </a>
                 </div>
-            </div>           <a href="./main.html" class="navbar__option">TOP 100</a>
-            <a href="./main.html" class="navbar__option">Dodaj książke</a>
-        </div>
-    </nav>
-    <div class="mobile-menu">
-        <div class="mobile-menu-buttons">
-            <button class="header__menu-button"><i class="fa fa-user-o" aria-hidden="true"></i></button>
-            <button class="exit-button" onclick="toggleMenu();"><i class="fa fa-times" aria-hidden="true"></i></button>
-        </div>
-        <div class="mobile-primary-menu">
-            <ul class="mobile-primary-menu">
-                <li class="mobile-menu-item">
-                    <div class="wrapper-mobile-menu__option">
-                        <a class="mobile-menu__option">Katalog</a>
-                        <button class="mobile-menu__option--button" onclick="toggleMenuLinks(this);"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-                    </div>
-                    <ul class="mobile-menu__links">
-                        <li class="mobile-menu__link--small">Ksiązki</li>
-                        <li class="mobile-menu__link--small">Autorzy</li>
-                        <li class="mobile-menu__link--small">Cytaty</li>
-                    </ul>
-                </li>
-                <li class="mobile-menu-item">
-                    <div class="wrapper-mobile-menu__option">
-                        <a class="mobile-menu__option">Katalog</a>
-                        <button class="mobile-menu__option--button" onclick="toggleMenuLinks(this);"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-                    </div>
-                    <ul class="mobile-menu__links">
-                        <li class="mobile-menu__link--small">Ksiązki</li>
-                        <li class="mobile-menu__link--small">Autorzy</li>
-                        <li class="mobile-menu__link--small">Cytaty</li>
-                        <li class="mobile-menu__link--small">Cytaty</li>
-                        <li class="mobile-menu__link--small">Cytaty</li>
-                    </ul>
-                </li>
-                <li class="mobile-menu-item">
-                    <div class="wrapper-mobile-menu__option">
-                        <a class="mobile-menu__option">Katalog</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-    <div class="wrapper-search--mobile">
-        <div class="exit-button--small">
-            <button class="exit-button--small" onclick="toggleSearchInput();"><i class="fa fa-times" aria-hidden="true"></i></button>
-        </div>
-        <form>
-            <div class="search-box">
-                <input type="search" class="search-input" placeholder="Szukaj">
-                <button class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
-            </div>
-        </form>
-    </div>
-    <main class="main__containter">
-
-        <div class="promo-banner">
-            <div class="promo-banner__slogan">
-                <h1 class="label promo-banner__label">Znajdź swoją <br> ulubioną książkę <br> i napisz recenezje</h1>
-                <p class="text promo-banner__text">Dołącz do społeczności Libellum <br> i dziel się swoimi wrażeniami z książek</p>
-                <a href="" class="promo-banner__link">Dołącz !</a>
-            </div>
-            <div class="promo-banner__logo">
-                <img src="./images/banner.png"  class="promo-banner__img">
             </div>
 
-        </div>
+            <div class="section-books">
+                <h1 class="label">Hity miesiąca</h1>
+                <div class="books-grid books-grid--hits">
+                    <a href="main.html" class="book__link">
+                        <div class="book">
+                            <img src="/images/ksiazki/T003964.jpg" class="book__img">
+                            <img src="/images/crown.svg" alt="" class="book__crown">
+                            <h4 class="book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                            <h6 class="book__author">Clone</h6> 
+                        </div>
+                    </a>
+                    <a href="main.html" class="book__link">
+                        <div class="book">
+                            <img src="/images/ksiazki/metro.jpg" class="book__img">
+                            <img src="/images/crown_silver.svg" alt="" class="book__crown">
+                            <h4 class="book__title">Clone</h4> 
+                            <h6 class="book__author">Clone</h6> 
+                        </div>
+                    </a>
+                    <a href="main.html" class="book__link">
+                        <div class="book">
+                            <img src="/images/ksiazki/metro.jpg" class="book__img">
+                            <img src="/images/crown_brown.svg" alt="" class="book__crown">
+                            <h4 class="book__title">Clone</h4> 
+                            <h6 class="book__author">Clone</h6> 
+                        </div>
+                    </a>
+                </div>
+            </div>      
+            
+            <div class="section-categories">
+                <h1 class="label">Najpopularniejsze kategorie</h1>
+                <div class="section-categories__links">
+                    <a href="" class="section-categories__link">
+                        <img src="/images/icons/wedding-ring.svg" alt="">
+                        literatura obyczajowa, romans
+                    </a> 
+                    <a href="" class="section-categories__link">
+                        <img src="/images/icons/kryminał.svg" alt="">
+                        kryminał, sensacja, thirrler
+                    </a> 
+                    <a class="section-categories__link">
+                        <img src="/images/icons/fanatasy.svg" alt="">
+                        fantasy, science fiction 
+                    </a>
+                    <a class="section-categories__link">
+                        <img src="/images/icons/dokument.svg" alt="">
+                        reportaż
+                    </a>
+                    <a class="section-categories__link">
+                        <img src="/images/icons/horror.svg" alt="">
+                        horror 
+                    </a>
+                </div>
 
-        <div class="section-books">
-            <h2 class="label">Ostatnio dodane</h2>
-            <div class="books--grid">
-                <a href="main.html" class="book__link">
-                    <div class="book">
-                        <img src="/images/ksiazki/T003964.jpg" class="book__img">
-                        <h4 class="book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
-                        <h6 class="book__author">Clone</h6> 
+                <div class="category">
+                    <div>
+                        <h2 class="label category__label">BELETRYSTYKA</h2>
+                        <div class="category__links">
+                            <a href="" class="category__link">kategoria 1</a>
+                            <a href="" class="category__link">kategoria 1</a>
+                            <a href="" class="category__link">kategoria 1adsddasda</a>
+                            <a href="" class="category__link">kategoria 1</a>
+                            <a href="" class="category__link">kategoria 1asdasdasd</a>
+                        </div>
                     </div>
-                </a>
-                <a href="main.html" class="book__link">
-                    <div class="book">
-                        <img src="/images/ksiazki/metro.jpg" class="book__img">
-                        <h4 class="book__title">Clone</h4> 
-                        <h6 class="book__author">Clone</h6> 
+
+                    <div class="wrapper-category">
+                        <h2 class="label category__label">POPULARNE KSIĄŻKI Z KATEGORII</h2>
+                        <div class="books-grid books-grid--category">
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </a>
-                <a href="main.html" class="book__link">
-                    <div class="book">
-                        <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
-                        <h4 class="book__title">Clone</h4> 
-                        <h6 class="book__author">Clone</h6> 
+                    
+                </div>
+                
+                
+                <div class="category">
+                    <div>
+                        <h2 class="label category__label">BELETRYSTYKA</h2>
+                        <div class="category__links">
+                            <a href="" class="category__link">kategoria 1</a>
+                            <a href="" class="category__link">kategoria 1</a>
+                            <a href="" class="category__link">kategoria 1adsddasda</a>
+                            <a href="" class="category__link">kategoria 1</a>
+                            <a href="" class="category__link">kategoria 1asdasdasd</a>
+                        </div>
                     </div>
-                </a>
-                <a href="main.html" class="book__link">
-                    <div class="book">
-                        <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
-                        <h4 class="book__title">Clone</h4> 
-                        <h6 class="book__author">Clone</h6> 
+
+                    <div class="wrapper-category">
+                        <h3 class="label category__label">Popularne książki z kategorii</h3>
+                        <div class="books-grid books-grid--category">
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </a>
-                <a href="main.html" class="book__link">
-                    <div class="book">
-                        <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
-                        <h4 class="book__title">Clone</h4> 
-                        <h6 class="book__author">Clone</h6> 
+                    
+                </div>
+                
+                
+                <div class="category">
+                    <div>
+                        <h2 class="label category__label">BELETRYSTYKA</h2>
+                        <div class="category__links">
+                            <a href="" class="category__link">kategoria 1</a>
+                            <a href="" class="category__link">kategoria 1</a>
+                            <a href="" class="category__link">kategoria 1adsddasda</a>
+                            <a href="" class="category__link">kategoria 1</a>
+                            <a href="" class="category__link">kategoria 1asdasdasd</a>
+                        </div>
                     </div>
-                </a>
-                <a href="main.html" class="book__link">
-                    <div class="book">
-                        <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
-                        <h4 class="book__title">Clone</h4> 
-                        <h6 class="book__author">Clone</h6> 
+
+                    <div class="wrapper-category">
+                        <h3 class="label category__label">Popularne książki z kategorii</h3>
+                        <div class="books-grid books-grid--category">
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </a>
-                <a href="main.html" class="book__link">
-                    <div class="book">
-                        <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
-                        <h4 class="book__title">Clone</h4> 
-                        <h6 class="book__author">Clone</h6> 
+                    
+                </div>
+
+                <div class="category">
+                    <div>
+                        <h2 class="label category__label">BELETRYSTYKA</h2>
+                        <div class="category__links">
+                            <a href="" class="category__link">kategoria 1</a>
+                            <a href="" class="category__link">kategoria 1</a>
+                            <a href="" class="category__link">kategoria 1adsddasda</a>
+                            <a href="" class="category__link">kategoria 1</a>
+                            <a href="" class="category__link">kategoria 1asdasdasd</a>
+                        </div>
                     </div>
-                </a>
-                <a href="main.html" class="book__link">
-                    <div class="book">
-                        <img src="/images/ksiazki/BELETRYSTYKA/forsurenotyou.jpg" class="book__img">
-                        <h4 class="book__title">Clone</h4> 
-                        <h6 class="book__author">Clone</h6> 
+
+                    <div class="wrapper-category">
+                        <h3 class="label category__label">Popularne książki z kategorii</h3>
+                        <div class="books-grid books-grid--category">
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                            <a href="main.html" class="book__link">
+                                <div class="book category__book">
+                                    <img src="/images/ksiazki/T003964.jpg" class="book__img category-book__img">
+                                    <h4 class="book__title category-book__title">Wiedźmin: ostatnie życzenie llllllllllllllllllllllllllll</h4> 
+                                    <h6 class="book__author category-book__author">Clone</h6> 
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </a>
+                    
+                </div>
+                
             </div>
-        </div>
-    </main>
+            
+            
+        </main>
+        
+        <footer class="footer">
+            <div class="footer__header">
+                <img src="/images/logov2_white.svg" alt="" class="footer__logo">
+                <a href="">Ale chuj</a>
+                <a href="">Ale chuj</a>
+                <a href="">Ale chuj</a>
+                <a href="">Ale chuj</a>
+                <a href="">Ale chuj</a>
+            </div>
+        </footer>
+        
     </div> 
 </body>
 <script src="./main.js">

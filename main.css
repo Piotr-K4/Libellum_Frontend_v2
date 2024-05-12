@@ -2,13 +2,13 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 6rem;
+    padding-bottom: 15rem;
 }
 
 
 .section-books{
     padding: 0.5rem;
-
 }
 
 .book{
@@ -21,9 +21,10 @@
     overflow: hidden;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
-.books--grid{
+.books-grid{
     display: grid;
     padding-bottom: 2rem;
     padding-right: 1rem;
@@ -33,6 +34,13 @@
     overflow-x: auto;
 }
 
+.books-grid--hits{
+    grid-template-columns:repeat(auto-fill,minmax(17rem,17rem));
+    gap: 1.8rem;
+    justify-content: center;
+    align-items: center;
+}
+
 .book__link{
     text-decoration: none;
     color: black;
@@ -40,7 +48,9 @@
 
 .book__img{
     max-width: 200px;
-    height: 300px; 
+    max-height: 300px; 
+    width: 100%;
+    height: 100%;
     border-radius: 30px;
 }
 
@@ -49,7 +59,7 @@
     align-self:flex-start;
     padding:0 1.5rem;
     white-space: pre ;
-    max-width: 25ch;
+    max-width: 90%;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -58,6 +68,14 @@
     margin: 0;
     align-self:flex-start;
     padding:0 1.5rem;
+    font-weight: 400;
+}
+
+.book__crown{
+    position: absolute;
+    top: 5;
+    right: 0;
+    transform: rotate(35deg);
 }
 
 .promo-banner{
@@ -93,6 +111,88 @@
     padding: 1rem 2rem;
 }
 
+.section-categories{
+    padding: 0.5rem;
+}
+
+.section-categories__links{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+    margin: 3rem;
+}
+
+.section-categories__link{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #3a4c5a;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.category{
+    background-image: url("/images/category.png");
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    margin-top: 3rem;
+    overflow-x: scroll;
+    gap: 5rem;
+}
+
+.category__label{
+    text-align: left;
+    color: white;
+}
+
+.category__links{
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: left;
+    column-gap: 3rem;
+    row-gap: 1rem;
+}
+
+.category__link{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+
+.category__book{
+    background-color:transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    color: white;
+}
+
+.category-book__img{
+    width: 100%;
+    height: 100%;
+}
+
+.category-book__title,
+.category-book__author{
+    padding: 0;
+    max-width: 100%;
+}
+
+
+
+.books-grid--category{
+    grid-template-columns: repeat(6,7rem);
+    gap: 1.5rem;
+}
+
+.wrapper-category{
+    overflow-x: scroll;
+}
 
 
 
