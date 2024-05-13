@@ -7,6 +7,7 @@ body{
     /* background-image: url(./images/backgroundv3.jpg); */
     box-shadow: rgb(215, 215, 215) 0px 0px 0px 1px, ;
     height: 3000px;
+    background-color: #F9F9F9;
 }
 form{
     margin: 0;
