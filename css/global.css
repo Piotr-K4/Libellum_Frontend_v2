@@ -6,13 +6,22 @@ body{
     margin: 0;
     /* background-image: url(./images/backgroundv3.jpg); */
     box-shadow: rgb(215, 215, 215) 0px 0px 0px 1px, ;
-    height: 3000px;
     background-color: #F9F9F9;
 }
 form{
     margin: 0;
 }
 
+.page-container{
+    max-width: 1360px;
+    min-height: 100%;
+    margin: 0 auto;
+    /* padding: 0 1rem; */
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
 
 .label{
     color: #4E4F50;
@@ -21,6 +30,10 @@ form{
     letter-spacing: -1.5px;
     line-height: 95%;
     text-align: center;
+}
+
+.label--left{
+    text-align: left;
 }
 
 .text{

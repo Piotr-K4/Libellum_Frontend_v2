@@ -1,6 +1,9 @@
 .footer{
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
     padding: 1rem 0.5rem;
     gap: 1rem;
     background-color: #3a4c5a;

@@ -25,15 +25,35 @@ function toggleMenuLinks(option) {
         arrowIcon.style.transform = "rotate(90deg)";
         setTimeout(() => {
             menuLinks.classList.toggle("mobile-menu__links-is-active");
-        }, 30);
+        }, 0);
     } else {
         arrowIcon.style.transition = "transform 0.2s ease-in-out";
         arrowIcon.style.transform = "rotate(0deg)";
         setTimeout(() => {
             menuLinks.classList.toggle("mobile-menu__links-is-active");
-        }, 30);
+        }, 0);
     }
 }
+
+
+function toggleFilterItems(option){
+    console.log(option.parentElement.nextElementSibling)
+    const arrowIcon = option.firstElementChild
+    const filterItems = option.parentElement.nextElementSibling
+    
+    filterItems.classList.toggle("filters__items--is-active");
+    
+    if(filterItems.classList.contains("filters__items--is-active")){
+        arrowIcon.style.transition = "transform 0.2s ease-in-out";
+        arrowIcon.style.transform = "rotate(90deg)";
+    } else {
+        arrowIcon.style.transition = "transform 0.2s ease-in-out";
+        arrowIcon.style.transform = "rotate(0deg)";
+    }
+
+
+}
+
 
 
 window.addEventListener("resize", () => {

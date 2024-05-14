@@ -1,4 +1,5 @@
 .main__containter{
+    flex: 1 0 auto;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
