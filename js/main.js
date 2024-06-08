@@ -1,6 +1,8 @@
 function toggleMenu(){
     let mobileMenu = document.querySelector(".mobile-menu")
+    let searchBox = document.querySelector(".header__menu-button--search")
     mobileMenu.classList.toggle("mobile-menu--is-active")
+    searchBox.toggleAttribute("disabled")
 }
 
 function toggleSearchInput(){

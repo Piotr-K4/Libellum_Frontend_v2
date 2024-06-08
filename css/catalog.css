@@ -35,7 +35,7 @@
     color: #171e24;
 }
 
-.catalog__filters-section{
+/* .catalog__filters-section{
     border-bottom: 1px solid #a1a1a1;
 }
 
@@ -117,7 +117,7 @@
     height: max-content;
     padding-bottom: 2rem;
 }
-
+ */
 
 .wrapper-catalog__filters-button{
     width: 100%;
@@ -138,4 +138,9 @@
 .catalog__filters-button:hover{
     color: white;
     background-color: #3a4c5a;
+}
+
+
+.mobile-catalog__filters{
+    
 }
