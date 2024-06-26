@@ -1,10 +1,13 @@
+.catalog{
+    position: relative;
+}
+
 .catalog__options{
     display: flex;
     padding: 0.5rem;
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid #d1d1d1 ;
-    margin-bottom: 1rem;
 }
 
 .catalog__results{
@@ -35,8 +38,12 @@
     color: #171e24;
 }
 
-/* .catalog__filters-section{
-    border-bottom: 1px solid #a1a1a1;
+.catalog__filters-section{
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-content: center;
 }
 
 .filters{
@@ -67,6 +74,7 @@
     border: none;
     background-color: white;
     font-size: 1rem;
+    padding-top: 0.5rem;
 }
 
 .filters__option-button i{
@@ -77,11 +85,11 @@
 
 .filters__search-box{
     min-height: 2rem;
-    justify-content: left;
 }
 
 .filters__search-input{
     min-height: 100%;
+    flex-grow: 1;
     border: none;
     border-bottom: 1px solid #d1d1d1 ;
 }
@@ -113,15 +121,16 @@
 
 .filters--date{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: max-content;
     padding-bottom: 2rem;
 }
- */
 
 .wrapper-catalog__filters-button{
     width: 100%;
     text-align: center;
+    padding: 1rem;
+    box-sizing: border-box ;
 }
 
 .catalog__filters-button{
@@ -130,7 +139,7 @@
     color: #3a4c5a;
     font-size: 1rem;
     padding: 1rem;
-    width: 90%;
+    width: 100%;
     transition: 0.3s;
 }
 
@@ -141,6 +150,72 @@
 }
 
 
-.mobile-catalog__filters{
-    
+.mobile-filters{
+    position: fixed; 
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease-in-out;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
+
+.mobile-filters--is-active{
+    transform: translateX(0%);
+}
+
+.mobile-filters__buttons{
+    display: flex;
+    padding: 0.5rem;
+    justify-content: right;
+}
+
+.mobile-filters__filters{
+}
+
+.mobile-filters__menu{
+    overflow-y: auto ;
+    flex-grow: 1;
+}
+
+
+.mobile-filters__save{
+    height: 100px;
+    background-color: #3a4c5a;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 110;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-filters__submit{
+    background-color: transparent;
+    border: none;
+    color: #ffff;
+    font-size: 1.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

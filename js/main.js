@@ -18,7 +18,6 @@ function toggleSearchInput(){
 function toggleMenuLinks(option) {
     const arrowIcon = option.firstElementChild;
     const menuLinks = option.parentElement.nextElementSibling;
-    console.log(window.innerWidth)
 
     arrowIcon.classList.toggle("mobile-menu__option--button-is-active");
 
@@ -39,21 +38,35 @@ function toggleMenuLinks(option) {
 
 
 function toggleFilterItems(option){
-    console.log(option.parentElement.nextElementSibling)
     const arrowIcon = option.firstElementChild
-    const filterItems = option.parentElement.nextElementSibling
+    const filterItems = option.nextElementSibling
+
+
     
     filterItems.classList.toggle("filters__items--is-active");
     
     if(filterItems.classList.contains("filters__items--is-active")){
-        arrowIcon.style.transition = "transform 0.2s ease-in-out";
+        arrowIcon.style.transition = "transform 0.1s ease-in-out";
         arrowIcon.style.transform = "rotate(90deg)";
     } else {
-        arrowIcon.style.transition = "transform 0.2s ease-in-out";
+        arrowIcon.style.transition = "transform 0.1s ease-in-out";
         arrowIcon.style.transform = "rotate(0deg)";
     }
 
 
+}
+
+
+function toggleMobileFilters(){
+    const mobileFilters = document.querySelector(".mobile-filters")
+    mobileFilters.classList.toggle("mobile-filters--is-active")
+
+
+    if(document.body.style.overflowY === ""){
+        document.body.style.overflowY = "hidden" 
+    } else {
+        document.body.style.overflowY = "" 
+    }
 }
 
 
@@ -72,4 +85,12 @@ window.addEventListener("resize", () => {
     }
 }
 )
+
+
+
+
+
+
+
+
 
