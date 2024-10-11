@@ -1,0 +1,10 @@
+.catalog__authors-list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(30, 1fr);
+    grid-auto-flow: column;
+    row-gap:0.5em;
+    font-size: 0.8em;
+    text-align: left;
+}

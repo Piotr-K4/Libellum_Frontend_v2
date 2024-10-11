@@ -15,6 +15,23 @@
         flex-direction: row;
         align-items: center;
     }
+    
+    .wrapper-catalog__filters-button{
+        display: none;
+    }
+    
+    .catalog__filters{
+        display: block;
+        min-width: 40%;
+    }
+    
+    .catalog__filters-section{
+        border-bottom: 1px solid #3d3d3d;
+    }
+    
+    .catalog__main{
+        flex-direction: row;
+    }
  }
 
 @media (min-width:992px){
@@ -42,6 +59,10 @@
     }
     .books-grid--hits{
         grid-template-columns:repeat(3,minmax(17rem,17rem));
+    }
+    
+    .catalog__main{
+        padding: 0 2rem;
     }
 
 }

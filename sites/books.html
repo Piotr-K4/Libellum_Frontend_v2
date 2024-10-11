@@ -276,29 +276,309 @@
         </form>
 
         <main class="main__containter">
-            <div class="catalog">
-
-                <div class="catalog__options">
-                    <h4 class="label catalog__results">Wyświetlono 1-9 z 50 wyników</h4>
-                    <div>
-                        <h4 class="label catalog__results">Posortuj:</h4>
-                        <select name="catalog__sort" id="" class="catalog__sort">
-                            <option value="">Liczba ocen malejąco</option> 
-                            <option value="">Liczba ocen rosnąco</option> 
-                            <option value="">Data wydania malejąco</option> 
-                            <option value="">Data wydania rosnąco</option> 
-                        </select>
-                    </div>
-                </div>
+            <!-- <div class="catalog"> -->
+                <!-- <div class="catalog__options"> -->
+                <!--     <h4 class="label catalog__results">Wyświetlono 1-9 z 50 wyników</h4> -->
+                <!--     <div> -->
+                <!--         <h4 class="label catalog__results">Posortuj:</h4> -->
+                <!--         <select name="catalog__sort" id="" class="catalog__sort"> -->
+                <!--             <option value="">Liczba ocen malejąco</option> --> 
+                <!--             <option value="">Liczba ocen rosnąco</option> --> 
+                <!--             <option value="">Data wydania malejąco</option> --> 
+                <!--             <option value="">Data wydania rosnąco</option> --> 
+                <!--         </select> -->
+                <!--     </div> -->
+                <!-- </div> -->
 
                 <div class="catalog__main">
                     <div class="wrapper-catalog__filters-button">
-                        <button class="catalog__filters-button" onclick="toggleMobileFilters();">FILTRY</button>
+                        <button class="button-whitebg catalog__filters-button" onclick="toggleMobileFilters();" style="width: 100%;">FILTRY</button>
+                    </div>
+                   
+                    <div class="catalog__filters">
+                        <h1 class="label" style="text-align: left;">FILTRY</h1>
+                        <div class="catalog__filters-section">
+                            <h4>KSIĄŻKI Z KATEGORII</h4>
+                            <ul class="filters">
+                               <li class="filters__option">
+                                   <div class="filters__option-button" onclick="toggleFilterItems(this);"><i class="fa fa-angle-right" aria-hidden="true"></i>  belerystyka</div> 
+                                   <ul class="filters__items">
+                                       <li class="filters__item">horror</li>
+                                       <li class="filters__item">klasyka</li>
+                                       <li class="filters__item">kryminał</li>
+                                       <li class="filters__item">kryminał</li>
+                                   </ul>
+                               </li> 
+                               <li class="filters__option">
+                                   <div class="filters__option-button" onclick="toggleFilterItems(this);"><i class="fa fa-angle-right" aria-hidden="true"></i>  belerystyka</div> 
+                                   <ul class="filters__items">
+                                       <li class="filters__item">horror</li>
+                                       <li class="filters__item">klasyka</li>
+                                       <li class="filters__item">kryminał</li>
+                                       <li class="filters__item">kryminał</li>
+                                   </ul>
+                               </li> 
+                            </ul>
+                        </div>
+                        
+                        
+                        <div class="catalog__filters-section">
+                            <h4>Tagi</h4>
+                            <div class="search-box filters__search-box">
+                                <input type="search" class="search-input filters__search-input" placeholder="szukaj">
+                                <button class="search-button filters__search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="filters">
+                                <h5>Najpopularniejsze</h5>
+                                <div class="filters__grid">
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        
+                        <div class="catalog__filters-section">
+                            <h4>DATA WYADANIA</h4>
+                            <div class="filters filters--date">
+                                <div>
+                                    <label for="dateFrom">OD</label>
+                                    <input type="date" name="dateFrom" id="dateFrom" class="filters__date-input">
+                                </div>
+                                <div>
+                                    <label for="dateTo">DO</label>
+                                    <input type="date" name="dateTo" id="" class="filters__date-input">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="catalog__filters-section">
+                            <h4>Tagi</h4>
+                            <div class="search-box filters__search-box">
+                                <input type="search" class="search-input filters__search-input" placeholder="szukaj">
+                                <button class="search-button filters__search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="filters">
+                                <h5>Najpopularniejsze</h5>
+                                <div class="filters__grid">
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                </div> 
+                            </div>
+                       </div>
+                        <div class="catalog__filters-section">
+                            <h4>Tagi</h4>
+                            <div class="search-box filters__search-box">
+                                <input type="search" class="search-input filters__search-input" placeholder="szukaj">
+                                <button class="search-button filters__search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="filters">
+                                <h5>Najpopularniejsze</h5>
+                                <div class="filters__grid">
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                    <div class="filters__item">
+                                        <input type="checkbox" name="lel" id="">
+                                        <label for="lel">XD</label>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
                     </div>
 
 
-                    <div class="catalog__books">
+
+                    <div class="catalog__content">
                         <h1 class="label" style="text-align: left;">KSIĄŻKI</h1>
+                        <div>
+                            <h4 class="label catalog__results">Posortuj:</h4>
+                            <select name="catalog__sort" id="" class="catalog__sort">
+                                <option value="">Liczba ocen malejąco</option> 
+                                <option value="">Liczba ocen rosnąco</option> 
+                                <option value="">Data wydania malejąco</option> 
+                                <option value="">Data wydania rosnąco</option> 
+                            </select>
+                        </div>
+
+                        <div class="catalog__books-list">
+                            
+                            <div class="catalog__book">
+                                <div class="catalog__book-primary">
+                                    <img src="/images/ksiazki/metro.jpg" class="book__img catalog__book-img">
+                                    <div class="catalog__book-info">
+                                        <h4 class="book__title">Metro</h4>
+                                        <h5 class="book__author">Dimitry gluhowsky</h5>
+                                    </div>
+                                </div>
+                                <div class="catalog__book-secondary">
+
+                                    <div class="catalog__book-button">
+                                        <div class="button-whitebg button-whitebg--small">DODAJ KSIĄŻKE</div> 
+                                    </div>
+
+                                    <div class="catalog__book-button">
+                                        <div class="button-whitebg button-whitebg--small">KUP KSIĄŻKE</div> 
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="catalog__book">
+                                <div class="catalog__book-primary">
+                                    <img src="/images/ksiazki/BELETRYSTYKA/clone.jpg" class="book__img catalog__book-img">
+                                    <div class="catalog__book-info">
+                                        <h4 class="book__title">Metro</h4>
+                                        <h5 class="book__author">Dimitry gluhowsky</h5>
+                                    </div>
+                                </div>
+                                <div class="catalog__book-secondary">
+
+                                    <div class="catalog__book-button">
+                                        <div class="button-whitebg button-whitebg--small">DODAJ KSIĄŻKE</div> 
+                                    </div>
+
+                                    <div class="catalog__book-button">
+                                        <div class="button-whitebg button-whitebg--small">KUP KSIĄŻKE</div> 
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="catalog__book">
+                                <div class="catalog__book-primary">
+                                    <img src="/images/ksiazki/BELETRYSTYKA/gdziespiewaja.jpg" class="book__img catalog__book-img">
+                                    <div class="catalog__book-info">
+                                        <h4 class="book__title">Metro</h4>
+                                        <h5 class="book__author">Dimitry gluhowsky</h5>
+                                    </div>
+                                </div>
+                                <div class="catalog__book-secondary">
+
+                                    <div class="catalog__book-button">
+                                        <div class="button-whitebg button-whitebg--small">DODAJ KSIĄŻKE</div> 
+                                    </div>
+
+                                    <div class="catalog__book-button">
+                                        <div class="button-whitebg button-whitebg--small">KUP KSIĄŻKE</div> 
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
                     </div>
                 </div>
                 

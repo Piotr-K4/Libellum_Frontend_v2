@@ -196,9 +196,9 @@
     transition: 0.3s;
 }
 
-.mobile-menu__link--small:hover{
-    color: #970C10;
-}
+/* .mobile-menu__link--small:hover{ */
+/*     color: #970C10; */
+/* } */
 
 .mobile-menu-buttons{
     display: flex;
