@@ -55,10 +55,6 @@
     transition: 0.25s ease-in-out;
 }
 
-.book__img:hover{
-    transform: scale(1.1);
-}
-
 .book__title{
     margin: 0;
     white-space: pre ;

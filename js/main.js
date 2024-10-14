@@ -41,9 +41,10 @@ function toggleFilterItems(option){
     const arrowIcon = option.firstElementChild
     const filterItems = option.nextElementSibling
 
+    console.log(option)
 
-    
     filterItems.classList.toggle("filters__items--is-active");
+    option.classList.toggle("filters__option-button--is-active")
     
     if(filterItems.classList.contains("filters__items--is-active")){
         arrowIcon.style.transition = "transform 0.1s ease-in-out";
@@ -52,8 +53,6 @@ function toggleFilterItems(option){
         arrowIcon.style.transition = "transform 0.1s ease-in-out";
         arrowIcon.style.transform = "rotate(0deg)";
     }
-
-
 }
 
 

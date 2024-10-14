@@ -3,7 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem 1rem;
+    padding: 1rem 3rem;
+    padding-bottom: 4rem;
+    column-gap: 3rem;
+    row-gap:2rem;
     background-color: #F5F4F0;
 }
 
@@ -16,11 +19,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
+}
+
+.bookPage__title{
+    white-space:normal;
+    max-width: 30ch;
+    text-align: center;
 }
 
 .bookPage__info-secondary{
     display: flex;
     flex-direction: column;
+    padding-top: 2rem;
+    row-gap: 2rem;
 }
 
 .bookPage__info-detail{
@@ -34,8 +46,9 @@
 
 .bookPage__library-btn{
     width: 100%;
+    min-width: 125px;
     height: 90px;
-    font-size: 0.6em;
+    font-size: 0.9em;
     font-weight: 600;
     background-color: #838996;
     box-sizing: border-box;
@@ -44,4 +57,25 @@
     padding: 1em;
     margin-bottom: 0.5rem;
     transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bookPage__library-btn iconify-icon{
+    font-size: 1.2rem;
+}
+
+.bookPage__library-btns{
+    display: flex;
+    flex-direction: column;
+}
+
+.rankingBook__img{
+    transition: 0.25s ease-in-out;
+}
+
+.rankingBook__img:hover{
+    transform: scale(1.1);
 }
