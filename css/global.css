@@ -37,6 +37,14 @@ form{
     text-align: left;
 }
 
+.label-box{
+    background-color: #3a4c5a;
+    color: white;
+    padding: 1rem;
+    max-width: 100%;    
+}
+
+
 .text{
     color: #3a4c5a;
 }
