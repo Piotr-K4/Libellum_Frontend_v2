@@ -1,0 +1,198 @@
+.generalstats{
+    height: 100%;
+    background-image: url(../images/all/bg_community.png);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.generalstats__stats{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.stats{
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stats__counter hr{
+    margin: 0;
+    border: 2px solid #970C10;
+}
+
+.stats__logo{
+    font-size: 3rem;
+}
+
+.counter__numbers{
+    color: #3a4c5a;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-wrap: nowrap;
+}
+
+.counter__text{
+    text-wrap: nowrap;
+}
+
+.userranking__label{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: #597194;
+    gap: 1em;
+    text-align: left;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.userranking__label iconify-icon{
+    font-size: 2rem;
+}
+
+.userranking__stats{
+    background-color: #f3f5fb;
+    padding: 0 0.1rem;;
+    padding-bottom: 2rem;
+}
+
+.userranking__topUsers{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.topUsers__user{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3.5rem;
+    box-sizing: border-box;
+}
+
+.topUsers__userProfile{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.topUsers__userProfile--winner{
+    width: 100px;
+    height: 100px;
+    border: 5px solid #ffda1d;
+    margin-top: -40px;
+}
+
+.topUsers__userProfile img{
+    width: 100%;
+}
+
+.topUsers__userPosition{
+    width: 30px;
+    height: 30px;
+    background: #bfc1c2;
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: -10px;
+    z-index: 3;
+    position: relative;
+}
+
+.topUsers__userPosition::before,
+.topUsers__userPosition::after{
+    content: "";
+    width: 15px;
+    height: 30px;
+    margin-top: 10px;
+    transform: skewY(-50deg);
+    background: #bfc1c2;
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.topUsers__userPosition::after{
+    transform: skewY(50deg);
+    right: 0;
+}
+
+.topUsers__userPosition--winner{
+    width: 44px;
+    height: 44px;
+    margin-top: -15px;
+    background: linear-gradient(0deg, rgba(184, 158, 25, 1) 0%, rgba(231, 197, 27, 1) 33%, rgba(255, 218, 29, 1) 51%);
+    font-size: 2em;
+}
+
+.topUsers__userPosition--winner::before,
+.topUsers__userPosition--winner::after{
+    width: 22px;
+    height: 40px;
+    margin-top: 15px;
+    background: linear-gradient(0deg, rgba(184, 158, 25, 1) 0%, rgba(231, 197, 27, 1) 33%, rgba(255, 218, 29, 1) 51%);
+}
+
+
+
+.topUsers__userName{
+    margin-top:30px;
+}
+
+.userranking__otherUsers{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 2rem 3rem;
+}
+
+.otherUsers__user{
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+    font-weight: 300;
+    color: #597194;
+    border-bottom: 1px solid #597194;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.otherUsers__userPosition{
+    margin-right: 10px;
+}
+
+.otherUsers__userProfile{
+    width: 25px;
+    min-width: 25px;
+    min-height: 25px;
+    margin-right: 5px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.otherUsers__userProfile img{
+    width: 100%;
+}
+
+.otherUsers__userName{
+    text-align: left;
+    flex-grow: 3;
+}
+
+
+
