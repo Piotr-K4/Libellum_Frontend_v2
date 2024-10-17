@@ -33,14 +33,13 @@
         flex-direction: row;
     }
 
-    .bookPage__library-btns{
-        flex-direction: row;
-        gap: 1rem;
-    }
+
 
     .generalstats__stats{
         flex-direction: row;
     }
+    
+
  }
 
 @media (min-width:992px){
@@ -94,6 +93,11 @@
         padding: 1rem;
         max-width: 100%;
     }
+    
+    .bookPage__library-btn{
+        font-size: 0.9rem;
+        width: 100px;
+    }
 
     .generalstats__stats{
         column-gap: 5.5rem;
@@ -127,12 +131,33 @@
     .userranking__category{
         width: 48%;
     }
+
+    .otherStats__list,
+    .accountUser__mainStats{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
 }
 
 
 @media (min-width:1200px){
     .section-categories__links{
         flex-direction: row;
+    }
+    
+    .accountUser{
+        flex-direction: row;
+    }
+    
+    .accountUser__label{
+        text-align: left;
+    }
+    
+    
+    .bookPage__library-btns{
+        flex-direction: row;
+        gap: 1rem;
     }
     
 }

@@ -45,16 +45,14 @@
 }
 
 .bookPage__library-btn{
-    width: 100%;
-    min-width: 125px;
-    height: 90px;
-    font-size: 0.9em;
+    width: 80px;
+    padding: 0.5rem;
+    font-size: 0.5rem;
     font-weight: 600;
     background-color: #838996;
     box-sizing: border-box;
     color: #fff;
     text-align: center;
-    padding: 1em;
     margin-bottom: 0.5rem;
     transition: 0.4s;
     display: flex;
@@ -64,12 +62,15 @@
 }
 
 .bookPage__library-btn iconify-icon{
-    font-size: 1.2rem;
+    font-size: 1rem;
+    padding: 0.5rem;
 }
 
 .bookPage__library-btns{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    gap: 0.5rem;
+    justify-content: center;
 }
 
 .rankingBook__img{
