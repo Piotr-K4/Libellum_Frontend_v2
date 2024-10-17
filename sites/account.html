@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -5,6 +6,8 @@
     <title>Libellum</title>
     <link rel="stylesheet" href="../css/header-navbar.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/userranking.css">
+    <link rel="stylesheet" href="../css/account.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/catalog.css">
@@ -14,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
 </head>
 <body>
     <div class="page-container">
@@ -157,55 +161,105 @@
 
         <main class="main__containter">
 
-            <div class="bookPage">
-                <img class="book__img bookPage__picture" src="/images/ksiazki/metro.jpg">
+            <section class="accountUser">
+                <div class="accountUser__profile">
+                    <img src="../images/all/terry.jpg">
+                </div>
 
-                <div class="bookPage__info">
-                    <h1 class="book__title bookPage__title">Tako rzecze zarausta</h1>
-
-                    <div class="bookPage__info-secondary">
-
-                        <div class="bookPage__info-detail">
-
-                            <h2 class="book__author">Dimitry Gluhovsky</h2>
-                            <p>Wydawnictwo: <span>XD</span></p>
-                            <span>Filozofia</span>
-                            <p>300 Str</p>
-
+                <div class="accountUser__info">
+                    <div class="accountUser__label">CZEŚĆ <strong>TERRY DAVISSSSSS</strong></div>
+                    <div class="accountUser__mainStats">
+                        <div class="accountUser__singleStats">
+                            <div class="singleStats__counter">0</div>
+                            <div class="singleStats__category">PRZECZYTANYCH KSIĄŻEK</div>
                         </div>
 
-                        <div class="bookPage__library">
+                        <div class="accountUser__singleStats">
+                            <div class="singleStats__counter">0</div>
+                            <div class="singleStats__category">KSIĄŻEK W BIBLIOTECE</div>
+                        </div>
 
-                            <h3 class="label" style="margin-top: 0;">DODAJ DO BIBLIOTECZKI</h3>
-                            <div class="bookPage__library-btns">
+                        <div class="accountUser__singleStats">
+                            <div class="singleStats__counter">0</div>
+                            <div class="singleStats__category">OPINI</div>
+                        </div>
 
-                                <div class="bookPage__library-btn">
-                                    <iconify-icon icon="tdesign:chat-checked"></iconify-icon>
-                                    <p style="margin: 0;">Przeczytane</p>
-
-                                </div>
-
-                                <div class="bookPage__library-btn">
-                                    <iconify-icon icon="pajamas:book"></iconify-icon>
-                                    <p style="margin: 0;">Czytam</p>
-
-                                </div>
-
-                                <div class="bookPage__library-btn">
-                                    <iconify-icon  icon="streamline:travel-wayfinder-lifebuoy-water-life-ring-wheely-lifebelt-kisbee"></iconify-icon>
-                                    <p style="margin: 0;">Chcę przeczytać</p>
-
-                                </div>
-
-                            </div>
-
+                        <div class="accountUser__singleStats">
+                            <div class="singleStats__counter">0</div>
+                            <div class="singleStats__category">POLUBIEŃ OPINII</div>
                         </div>
 
                     </div>
                 </div>
-                
-            </div>
+            </section>
 
+            <section class="accountUser__library">
+                <h1 class="label">BIBLIOTECZKA</h1>
+
+                <div class="bookPage__library">
+                    <div class="bookPage__library-btns">
+
+                        <div class="bookPage__library-btn">
+                            <p style="margin: 0;">PRZECZYTANE</p>
+                            <iconify-icon icon="tdesign:chat-checked"></iconify-icon>
+
+                        </div>
+
+                        <div class="bookPage__library-btn">
+                            <p style="margin: 0;">CZYTAM</p>
+                            <iconify-icon icon="pajamas:book"></iconify-icon>
+
+                        </div>
+
+                        <div class="bookPage__library-btn">
+                            <p style="margin: 0;">CHCE PRZECZYTAĆ</p>
+                            <iconify-icon  icon="streamline:travel-wayfinder-lifebuoy-water-life-ring-wheely-lifebelt-kisbee"></iconify-icon>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            
+            <section class="accountUser__otherStats">
+                <h1 class="label-box">MOJE STATYSTYKI</h1>
+                <div class="otherStats__list">
+
+                    <div class="otherstats__category">
+                        <iconify-icon icon="bi:book"></iconify-icon>
+                        <p>W sumie przeczytano</p>
+                        <hr>
+                        <h1>1000</h1>
+                        książek
+                    </div>
+                    
+                    <div class="otherstats__category">
+                        <iconify-icon icon="mdi:draw-pen" rotate="90deg"></iconify-icon>
+                        <p>a w sumie wydanych</p>
+                        <hr>
+                        <h1>1000</h1>
+                        opini
+                    </div>
+                    
+                    <div class="otherstats__category">
+                        <iconify-icon icon="tabler:quote" ></iconify-icon>
+                        <p>a w sumie dodanych</p>
+                        <hr>
+                        <h1>1000</h1>
+                        książek
+                    </div>
+                    
+                    <div class="otherstats__category">
+                        <iconify-icon icon="bi:book"></iconify-icon>
+                        <p>a w sumie dodanych</p>
+                        <hr>
+                        <h1>1000</h1>
+                        książek
+                    </div>
+                    
+                </div>
+
+            </section>
         </main>
         
         <footer class="footer">
@@ -227,5 +281,4 @@
 </body>
 <script src="../js/main.js">
 </script>
-<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </html>
