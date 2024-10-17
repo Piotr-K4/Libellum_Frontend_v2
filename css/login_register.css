@@ -1,0 +1,46 @@
+.loginPage{
+    background-color:#F5F4F0 ;
+    padding: 6rem 0;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.loginPage__header hr{
+    width: 70%;
+    max-width: 300px;
+}
+
+.loginPage h1{
+    font-weight: bold;
+}
+
+.loginPage__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.loginPage__formField label{
+    display: block;
+    text-align: left;
+    font-weight: 300;
+    padding-bottom: 0.2rem;
+}
+
+.loginpage__formfield input{
+    height: 2rem;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid grey;
+    outline: none;
+    transition: 0.4s;
+}
+
+.loginpage__formfield input:hover{
+    border-color: #3a4c5a;
+}

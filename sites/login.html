@@ -1,0 +1,209 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libellum</title>
+    <link rel="stylesheet" href="../css/header-navbar.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/login_register.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/catalog.css">
+    <link rel="stylesheet" href="../css/book.css">
+    <link rel="stylesheet" href="../css/mediaquery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <div class="header__menu-buttons">
+                <button class="header__menu-button header__menu-button--menu" onclick="toggleMenu();"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            </div>
+            <img src="../images/logov2.svg" class="header__logo">
+            <div class="wrapper-search--desktop">
+                <form>
+                    <div class="search-box">
+                        <input type="search" class="search-input" placeholder="szukaj">
+                        <button class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="header__menu-buttons">
+                <button class="header__menu-button header__menu-button--search" onclick="toggleSearchInput();"><i class="fa fa-search" aria-hidden="true"></i></button>
+                <button class="header__menu-button header__menu-button--user"><i class="fa fa-user-o" aria-hidden="true"></i></button>
+            </div>
+        </header>
+
+        <nav class="wrapper-navbar">
+            <div class="navbar">            
+                <div class="navbar__more-option">
+                    <button class="navbar__option">Katalog <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                    <div class="navbar__links">
+                        <a href="" class="navbar__link">cos</a>
+                        <a href="" class="navbar__link">cos</a>
+                        <a href="" class="navbar__link">cos</a>
+                        <a href="" class="navbar__link">cos</a>
+                    </div>
+                </div>
+                 <div class="navbar__more-option">
+                    <button class="navbar__option">Społeczność<i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                    <div class="navbar__links">
+                        <a href="" class="navbar__link">Ranking użytkowników</a>
+                    </div>
+                </div>           <a href="./main.html" class="navbar__option">TOP 100</a>
+                <a href="./main.html" class="navbar__option">Dodaj książke</a>
+            </div>
+        </nav>
+    
+        <div class="mobile-menu">
+            <div class="mobile-menu-buttons">
+                <button class="header__menu-button"><i class="fa fa-user-o" aria-hidden="true"></i></button>
+                <button class="exit-button" onclick="toggleMenu();"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+            <div class="mobile-primary-menu">
+                <ul class="mobile-primary-menu">
+                    <li class="mobile-menu-item">
+                        <div class="wrapper-mobile-menu__option">
+                            <a class="mobile-menu__option">Katalog</a>
+                            <button class="mobile-menu__option--button" onclick="toggleMenuLinks(this);"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                        </div>
+                        <ul class="mobile-menu__links">
+                            <li class="mobile-menu__link--small">Ksiązki</li>
+                            <li class="mobile-menu__link--small">Autorzy</li>
+                            <li class="mobile-menu__link--small">Cytaty</li>
+                            <li class="mobile-menu__link--small">Cytaty</li>
+                            <li class="mobile-menu__link--small">Cytaty</li>
+                        </ul>
+                    </li>
+                    <li class="mobile-menu-item">
+                        <div class="wrapper-mobile-menu__option">
+                            <a class="mobile-menu__option">Katalog</a>
+                            <button class="mobile-menu__option--button" onclick="toggleMenuLinks(this);"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                        </div>
+                        <ul class="mobile-menu__links">
+                            <li class="mobile-menu__link--small">Ksiązki</li>
+                            <li class="mobile-menu__link--small">Autorzy</li>
+                            <li class="mobile-menu__link--small">Cytaty</li>
+                            <li class="mobile-menu__link--small">Cytaty</li>
+                            <li class="mobile-menu__link--small">Cytaty</li>
+                        </ul>
+                    </li>
+                    <li class="mobile-menu-item">
+                        <div class="wrapper-mobile-menu__option">
+                            <a class="mobile-menu__option">Katalog</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="wrapper-search--mobile">
+            <div class="exit-button--small">
+                <button class="exit-button--small" onclick="toggleSearchInput();"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+            <form>
+                <div class="search-box">
+                    <input type="search" class="search-input" placeholder="Szukaj">
+                    <button class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+            </form>
+        </div>
+                
+        <form class="mobile-filters">
+            <div class="mobile-filters__buttons">
+                <div class="exit-button" onclick="toggleMobileFilters();"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </div>
+            <form>
+            <div class="mobile-primary-menu mobile-filters__menu">
+                <ul class="mobile-primary-menu">
+                    <li class="mobile-menu-item">
+                        <div class="wrapper-mobile-menu__option">
+                            <a class="mobile-menu__option">TAGI</a>
+                            <div class="mobile-menu__option--button" onclick="toggleMenuLinks(this);"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                        </div>
+                        <ul class="mobile-menu__links mobile-filters__filters">
+                            <li class="mobile-menu__link--small">
+                                <div class="catalog__filters-section">
+                                    <div class="search-box filters__search-box">
+                                        <input type="search" class="search-input filters__search-input" placeholder="szukaj">
+                                        <div class="search-button filters__search-button"><i class="fa fa-search" aria-hidden="true"></i></div>
+                                    </div>
+                                    <ul class="filters">
+                                        <div class="filters__grid">
+                                            <div class="filters__item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="">XD</label>
+                                            </div>
+                                            <div class="filters__item">
+                                                <input type="checkbox" name="lel" id="">
+                                                <label for="lel">XD</label>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="mobile-filters__save">
+                <input type="submit" value="ZAPISZ" class="mobile-filters__submit">
+            </div>
+            </form>
+        </form>
+        <main class="main__containter">
+            <section class="loginPage">
+                <div class="loginPage__header">
+                    <h1 class="label">Witaj ponownie!</h1>
+                    <h4 class="label">Jesteś tu nowy? <strong>&nbsp;Zarejestruj się</strong></h4>
+                    <hr>
+                </div>
+                
+                <form action="" class="loginPage__form">
+
+                    <div class="loginPage__formField">
+                        <label for="email">Email</label>
+                        <input type="email" name="nick" id="" placeholder="Podaj email">
+                    </div>
+
+                    <div class="loginPage__formField">
+                        <label for="password">Hasło</label>
+                        <input type="password" name="nick" id="" placeholder="Podaj Hasło">
+                    </div>
+
+                    <div class="loginPage__formField"></div>
+                        <input type="submit" class="button-whitebg" name="nick" id="" value="ZALOGUJ SIĘ">
+                    </div>
+
+                </form>
+                
+
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <div class="footer__header">
+                <img src="/images/logov2_white.svg" alt="" class="footer__logo">
+                <a href="" class="footer__link">Książki</a>
+                <a href="" class="footer__link">Autorzy</a>
+                <a href="" class="footer__link">Cytaty</a>
+                <a href="" class="footer__link">TOP100</a>
+                <a href="" class="footer__link">Społeczność</a>
+                <a href="" class="footer__link">Dodaj książke</a>
+            </div>
+            <div class="footer__section">
+                <a href="" class="footer__link footer__link--github"><i class="fa fa-github" aria-hidden="true"></i></a>
+            </div>
+        </footer>
+        
+    </div> 
+</body>
+<script src="../js/main.js">
+</script>
+</html>
