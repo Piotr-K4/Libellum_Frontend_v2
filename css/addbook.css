@@ -1,0 +1,48 @@
+.addbook{
+    text-align: center;
+}
+
+.addbook__topInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.addbook__bookImage{
+    background-color: #f0f0f0;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.addbook__basicInfo{
+    width: 100%;
+}
+
+
+.addbook .form__field{
+    padding: 1rem 0;
+}
+
+.addbook .form__field input{
+    width: 300px;
+}
+
+.addbook .form__field label{
+    text-align: center;
+}
+
+.addbook .form__field textarea{
+    width: 100%;
+    height: 200px;
+}
+
+
+.addbook__bottomInfo{
+    padding-bottom: 4rem;
+}
