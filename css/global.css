@@ -83,7 +83,31 @@ form{
     background-color: #3a4c5a;
 }
 
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 2rem;
+}
 
+.form__field label{
+    display: block;
+    text-align: left;
+    font-weight: 300;
+    padding-bottom: 0.2rem;
+}
 
+.form__field input{
+    height: 2rem;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid grey;
+    outline: none;
+    transition: 0.4s;
+}
 
-
+.form__field input:hover{
+    border-color: #3a4c5a;
+}
