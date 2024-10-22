@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -5,7 +6,7 @@
     <title>Libellum</title>
     <link rel="stylesheet" href="../css/header-navbar.css">
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/login_register.css">
+    <link rel="stylesheet" href="../css/userranking.css">
     <link rel="stylesheet" href="../css/account.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -157,33 +158,55 @@
             </div>
             </form>
         </form>
+
         <main class="main__containter">
-            <section class="loginPage">
-                <div class="loginPage__header">
-                    <h1 class="label">Witaj ponownie!</h1>
-                    <h4 class="label">Jesteś tu nowy? <strong>&nbsp;Zarejestruj się</strong></h4>
-                    <hr>
+
+            <section class="accountUser" style="flex-direction: column;;">
+                <h1 class="label">USTAWIENIA</h1>
+                <hr>
+                <div class="accountUser__profile">
+                    <img src="../images/all/terry.jpg">
                 </div>
-                
-                <form action="" class="form">
+               
+                <form action="" class="userSettings">
 
-                    <div class="form__field">
-                        <label for="email">Email</label>
-                        <input type="email" name="nick" id="" placeholder="Podaj email">
+                    <div class="userSettings__field form__field">
+                        <p class="userSettings__field--label">Pseudonim</p>
+                        <input type="text" name="" id="" class="">
                     </div>
 
-                    <div class="form__field">
-                        <label for="password">Hasło</label>
-                        <input type="password" name="nick" id="" placeholder="Podaj Hasło">
+                    <div class="userSettings__field form__field">
+                        <p class="userSettings__field--label">Imie</p>
+                        <input type="text" name="" id="" class="">
                     </div>
 
-                        <input type="submit" class="button-whitebg" name="nick" id="" value="ZALOGUJ SIĘ">
+                    <div class="userSettings__field form__field">
+                        <p class="userSettings__field--label">Nazwisko</p>
+                        <input type="text" name="" id="" class="">
                     </div>
+
+                    <div class="userSettings__field form__field">
+                        <p class="userSettings__field--label">Płeć</p>
+                        <input type="text" name="" id="" class="">
+                    </div>
+                    
+                    <div class="userSettings__field form__field">
+                        <p class="userSettings__field--label">Data urodzenia</p>
+                        <input type="text" name="" id="" class="">
+                    </div>
+
+                    <div class="userSettings__field form__field">
+                        <p class="userSettings__field--label">Opis</p>
+                        <input type="text" name="" id="" class="">
+                    </div>
+
+                <input type="submit" value="ZAPISZ ZMIANY" class="button-whitebg" style="margin-top: 2rem;">
 
                 </form>
-                
 
             </section>
+            
+
         </main>
         
         <footer class="footer">

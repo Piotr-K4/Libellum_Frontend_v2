@@ -120,3 +120,35 @@
     padding: 2rem;
     font-size: 0.8rem;
 }
+
+.userSettings{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    row-gap: 2rem;
+    text-align: center;    
+    align-items: center;
+}
+
+.userSettings__field{
+    border: 1px solid black;
+    padding: 1em 2em;
+    text-align: left;
+    max-width: 400px;
+    width: 90%;
+}
+
+.userSettings__field--label{
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #3a4c5a;
+}
+
+.userSettings__field--value{
+    margin: 0;
+}
+
+.accountUser .button-whitebg{
+    text-decoration: none;
+}

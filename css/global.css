@@ -108,6 +108,7 @@ form{
     transition: 0.4s;
 }
 
-.form__field input:hover{
+.form__field input:hover,
+.form__field input:focus{
     border-color: #3a4c5a;
 }
