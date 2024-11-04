@@ -160,6 +160,14 @@
         flex-grow: 1;
     }
     
+   .header__menu-button--desktop{
+        display: block;
+   } 
+   
+   .userOptions{
+        display: flex;
+   }
+    
 }
 
 

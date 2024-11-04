@@ -36,7 +36,16 @@
             </div>
             <div class="header__menu-buttons">
                 <button class="header__menu-button header__menu-button--search" onclick="toggleSearchInput();"><i class="fa fa-search" aria-hidden="true"></i></button>
-                <button class="header__menu-button header__menu-button--user"><i class="fa fa-user-o" aria-hidden="true"></i></button>
+                <div style="height: 100%; position: relative;">
+                    <button class="header__menu-button header__menu-button--desktop" onclick="toggleMobileUser(this);"><i class="fa fa-user-o" aria-hidden="true"></i> <span>Terry</span> <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                </div>
+                <div class="userOptions">
+                    <a>Moje Konto</a>
+                    <a>Biblioteczka</a>
+                    <a>Ustawienia</a>
+                    <a>Wyloguj się</a>
+
+                </div>
             </div>
         </header>
 
@@ -63,44 +72,69 @@
     
         <div class="mobile-menu">
             <div class="mobile-menu-buttons">
-                <button class="header__menu-button"><i class="fa fa-user-o" aria-hidden="true"></i></button>
+                <button class="header__menu-button header__menu-button--mobile" onclick="toggleMobileUser(this);"><i class="fa fa-user-o" aria-hidden="true"></i> <span>Terry</span> <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                <!-- Gdy użytkownik nie jest zalogowany to wyświetla się link do logowania -->
+                <!-- <a class="button-whitebg button-whitebg--small" style="margin-right: auto;">ZALOGUJ SIE</a> -->
                 <button class="exit-button" onclick="toggleMenu();"><i class="fa fa-times" aria-hidden="true"></i></button>
             </div>
-            <div class="mobile-primary-menu">
-                <ul class="mobile-primary-menu">
-                    <li class="mobile-menu-item">
-                        <div class="wrapper-mobile-menu__option">
-                            <a class="mobile-menu__option">Katalog</a>
-                            <button class="mobile-menu__option--button" onclick="toggleMenuLinks(this);"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-                        </div>
-                        <ul class="mobile-menu__links">
-                            <li class="mobile-menu__link--small">Ksiązki</li>
-                            <li class="mobile-menu__link--small">Autorzy</li>
-                            <li class="mobile-menu__link--small">Cytaty</li>
-                            <li class="mobile-menu__link--small">Cytaty</li>
-                            <li class="mobile-menu__link--small">Cytaty</li>
-                        </ul>
-                    </li>
-                    <li class="mobile-menu-item">
-                        <div class="wrapper-mobile-menu__option">
-                            <a class="mobile-menu__option">Katalog</a>
-                            <button class="mobile-menu__option--button" onclick="toggleMenuLinks(this);"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-                        </div>
-                        <ul class="mobile-menu__links">
-                            <li class="mobile-menu__link--small">Ksiązki</li>
-                            <li class="mobile-menu__link--small">Autorzy</li>
-                            <li class="mobile-menu__link--small">Cytaty</li>
-                            <li class="mobile-menu__link--small">Cytaty</li>
-                            <li class="mobile-menu__link--small">Cytaty</li>
-                        </ul>
-                    </li>
-                    <li class="mobile-menu-item">
-                        <div class="wrapper-mobile-menu__option">
-                            <a class="mobile-menu__option">Katalog</a>
-                        </div>
-                    </li>
-                </ul>
+            
+            <div style="height: 100%; position: relative;"> 
+                <div class="mobile-primary-menu">
+                    <ul class="mobile-primary-menu">
+                        <li class="mobile-menu-item">
+                            <div class="wrapper-mobile-menu__option">
+                                <a class="mobile-menu__option">Katalog</a>
+                                <button class="mobile-menu__option--button" onclick="toggleMenuLinks(this);"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                            <ul class="mobile-menu__links">
+                                <li class="mobile-menu__link--small">Ksiązki</li>
+                                <li class="mobile-menu__link--small">Autorzy</li>
+                                <li class="mobile-menu__link--small">Cytaty</li>
+                                <li class="mobile-menu__link--small">Cytaty</li>
+                                <li class="mobile-menu__link--small">Cytaty</li>
+                            </ul>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <div class="wrapper-mobile-menu__option">
+                                <a class="mobile-menu__option">Katalog</a>
+                                <button class="mobile-menu__option--button" onclick="toggleMenuLinks(this);"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                            <ul class="mobile-menu__links">
+                                <li class="mobile-menu__link--small">Ksiązki</li>
+                                <li class="mobile-menu__link--small">Autorzy</li>
+                                <li class="mobile-menu__link--small">Cytaty</li>
+                                <li class="mobile-menu__link--small">Cytaty</li>
+                                <li class="mobile-menu__link--small">Cytaty</li>
+                            </ul>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <div class="wrapper-mobile-menu__option">
+                                <a class="mobile-menu__option">Katalog</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="userOptionsMobile">
+                    <ul class="mobile-primary-menu">
+                        <li class="mobile-menu-item">
+                            <div class="wrapper-mobile-menu__option">
+                                <a class="mobile-menu__option"> <iconify-icon icon="material-symbols:account-box"></iconify-icon> Moje Konto</a>
+                            </div>
+                            <div class="wrapper-mobile-menu__option">
+                                <a class="mobile-menu__option"><iconify-icon icon="icomoon-free:books"></iconify-icon> Biblioteczka</a>
+                            </div>
+                            <div class="wrapper-mobile-menu__option">
+                                <a class="mobile-menu__option"><iconify-icon icon="solar:settings-bold" style="padding-right: 10px; box-sizing: border-box;"></iconify-icon> Ustawienia</a>
+                            </div>
+                            <div class="wrapper-mobile-menu__option">
+                                <a class="mobile-menu__option"> <iconify-icon icon="mdi:logout"></iconify-icon> Wyloguj się</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
             </div>
+
         </div>
     
         <div class="wrapper-search--mobile">

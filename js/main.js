@@ -68,6 +68,36 @@ function toggleMobileFilters(){
     }
 }
 
+function toggleMobileUser(option){
+    const mobileUser = document.querySelector(".userOptionsMobile");
+    const desktopUser = document.querySelector(".userOptions");
+    const arrowIcon = option.lastChild
+    
+    if(option.classList.contains("header__menu-button--mobile")){
+        mobileUser.classList.toggle("userOptionsMobile--active")
+        if(mobileUser.classList.contains("userOptionsMobile--active")){
+            arrowIcon.style.transition = "transform 0.1s ease-in-out";
+            arrowIcon.style.transform = "rotate(90deg)";
+        } else {
+            arrowIcon.style.transition = "transform 0.1s ease-in-out";
+            arrowIcon.style.transform = "rotate(0deg)";
+        }
+    } else{
+        desktopUser.classList.toggle("userOptions--active")
+        if(desktopUser.classList.contains("userOptions--active")){
+            arrowIcon.style.transition = "transform 0.1s ease-in-out";
+            arrowIcon.style.transform = "rotate(90deg)";
+        } else {
+            arrowIcon.style.transition = "transform 0.1s ease-in-out";
+            arrowIcon.style.transform = "rotate(0deg)";
+        }
+        
+        
+    }
+    
+    
+}
+
 
 
 window.addEventListener("resize", () => {
@@ -82,6 +112,8 @@ window.addEventListener("resize", () => {
             toggleSearchInput();
         }
     }
+    
+    
 }
 )
 
